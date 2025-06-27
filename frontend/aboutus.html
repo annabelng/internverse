@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    nav {
+      padding: 20px;;
+      color: rgb(150, 146, 146);
+      margin: 0 15px;
+      display: flex;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+      font-size: 20px;
+      justify-content: space-evenly;
+    }
+
+    nav a {
+  text-decoration: none; /* removes underline */
+  color: rgb(150, 146, 146); /* sets the text color */
+  margin: 0 15px;
+  transition: color 0.3s ease;
+  justify-content: center;
+}
+
+nav a:hover {
+  color: #ffffff; /* changes color on hover */
+
+}
+nav .logo{
+  color: rgb(65, 1, 84);
+  margin: 30px;
+  font-weight: bold;
+}
+
+  </style>
+
+    <nav>
+      <h2 class="logo">InternVerse</h2> 
+      <a href="index.html">Home</a>
+       <a href="aboutus.html">About Us</a>
+      <a href="buildyourown.html">Build Your Own NeRF</a>
+    </nav>
+
+  <body>
+    <div style="height: 30px;"></div>
+
+<div style="border: 2px solid #54418e; border-radius: 16px; padding: 32px; width: fit-content; margin: 0 auto 40px auto; background: #f9f8ff;">
+  <h1 style="font-size: 70; text-align: center; color: #54418e; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: normal;">
+    <b>
+    Internverse was inspired by a <br>
+    simple idea: what if your intern <br>
+    memories could live in 3D?<br>
+    </b>
+  </h1>
+  <h2 style="font-weight: normal; text-align: center; color: #858589; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+    We transform everyday photos into immersive 3D scenes powered by neural <br>
+    radiance fields also known as NeRFs. Whether it’s a team lunch, a work session, <br>
+    or fun times with friends, we make it easy to upload, render, and relive your intern 
+    experience. <br>
+  </h2>
+</div>
+
+ 
+    <!--Creating for Headshots & Bios... basically making the gallery ../-->
+<style>
+  .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  width:1000px;
+  margin: 0 auto;
+
+}
+
+.profile {
+  width: 200px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+}
+
+.profile img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+</style>
+
+
+</style>
+<div class="scroll-container">
+  <div class="gallery">
+    <div class="profile">
+      <img src="docs/sathvika.jpg" alt="Sathvika">
+      <p>Sathvika Sangoju is a rising senior at the University of Maryland, College Park majoring in Computer Science and minoring in Business and Data Science. She is a first time Microsoft SWE intern on the Bing Ads team under Microsoft AI.</p>
+    </div>
+    <div class="profile">
+      <img src="docs/Samantha Giles Headshot.jpg" alt="Samantha">
+      <p>Samantha Giles is a rising junior at Harvard concentrating in government and pursuing a secondary in computer science. She is working as an Explore intern on the Applied Data Science / Fleet & Capacity team in M365.</p>
+    </div>
+    <div class="profile">
+      <img src="docs/annabel.png" alt="Annabel">
+      <p>Annabel Ng is a rising senior studying electrical engineering and computer science at UC Berkeley. She's a software engineer intern on the AI Platform team working on a multi-agent solution accelerator.</p>  
+    </div>
+    <div class="profile">
+      <img src="docs/april.jpg" alt="april">
+      <p>April Porter is a rising senior at University of Maryland, College Park majoring in Computer Science and minoring in General Business. She also completed a two year honors program in cybersecurity. She is a first time Microsoft SWE intern on the Copilot Studio team.</p>
+    </div>
+    <div class="profile">
+      <img src="docs/naomis.jpg" alt="Naomi">
+      <p>Naomi Arnold is a rising senior at Tufts University majoring in Computer Engineering and Computer Science. She is working as a Microsoft SWE intern on the WCX team working on remote desktop.</p>  
+    </div>
+    <div class="profile">
+      <img src="docs/aaron.jpg" alt="Aaron">
+      <p>Aaron-Arthur is a rising junior at NYU Tandon, majoring in Biomolecular Sciences, with a minor in Genomics and Bioinformatics. He is working as an intern on the M365 Copilot/ ODIN-ML Experience Team.</p>  
+    </div>
+    <div class="profile">
+      <img src="docs/tiffanys.png" alt="Tiffany">
+      <p>Tiffany Orian is a rising senior at UCLA majoring in Linguistics and Computer Science. She is currently an Explorer Intern at Microsoft, working within the MSAI organization on the Language and Understanding team.</p> 
+    </div>
+</div>
+
+<script>
+  function scrollGallery(amount) {
+    document.getElementById('galleryScroll').scrollBy({ left: amount, behavior: 'smooth' });
+  }
+</script>
+
+  </div>
+</div>
+
+    <div style="height: 350px;"></div>
+
+
+  </body>

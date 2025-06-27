@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    nav {
+      padding: 20px;;
+      color: rgb(150, 146, 146);
+      margin: 0 15px;
+      display: flex;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+      font-size: 20px;
+      justify-content: center; /* Changed from space-evenly to center */
+      gap: 30px; /* Added gap to control spacing between items */
+    }
+
+    nav a {
+  text-decoration: none; /* removes underline */
+  color: rgb(150, 146, 146); /* sets the text color */
+  margin: 0 15px;
+  transition: color 0.3s ease;
+  justify-content: center;
+}
+
+nav a:hover {
+  color: #ffffff; /* changes color on hover */
+
+}
+nav .logo{
+  color: rgb(65, 1, 84);
+  margin: 30px;
+  font-weight: bold;
+}
+
+  </style>
+
+    <nav>
+      <h2 class="logo">InternVerse</h2> 
+      <a href="index.html">Home</a>
+       <a href="aboutus.html">About Us</a>
+      <a href="buildyourown.html">Build Your Own NeRF</a>
+    </nav>
+<body>
+  <main>
+    
+    <img src="docs/logo.png" alt="InternVerse Logo" style="display: block; margin: 0 auto; width: 700px; height: auto; object-fit: cover;">
+
+  <style>
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      padding: 20px;
+    }
+    .image-row img{
+      width: 400px;
+      height: auto;
+      object-fit: cover;
+    }
+
+  </style>
+  <div class="image-row">
+    <img src="docs/base_video.gif" alt="3D Image of Hacker Hideout">
+    <img src="docs/trex.gif" alt="3D Image of t-rex">
+    <img src="docs/benchflower_100k_rgb.gif" alt="3D Image of Benchflower">
+  </div>
+
+  <style>
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #459ed4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 300px
+    }
+    button:hover {
+      background-color: #c5c5c5;
+    }
+  </style>
+  <div style="height: 50px;"></div>
+  <button onclick="window.location.href='buildyourown.html';" style="font-size: 25px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+ <b>
+    Build Your Own Now
+ </b>
+</button>
+  <div style="height: 70px;"></div>
+</main>
+  </body>
+
+
+
+
+
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    nav {
+      padding: 20px;;
+      color: rgb(150, 146, 146);
+      margin: 0 15px;
+      display: flex;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+      font-size: 20px;
+      justify-content: space-evenly;
+    }
+
+    nav a {
+  text-decoration: none; /* removes underline */
+  color: rgb(150, 146, 146); /* sets the text color */
+  margin: 0 15px;
+  transition: color 0.3s ease;
+  justify-content: center;
+}
+
+nav a:hover {
+  color: #ffffff; /* changes color on hover */
+
+}
+nav .logo{
+  color: rgb(65, 1, 84);
+  margin: 30px;
+  font-weight: bold;
+}
+
+  </style>
+
+    <nav>
+      <h2 class="logo">InternVerse</h2> 
+      <a href="index.html">Home</a>
+       <a href="aboutus.html">About Us</a>
+      <a href="buildyourown.html">Build Your Own NeRF</a>
+    </nav>
+
+<!-- End of nav-->
+<title>Your Intern Experience in 3D!</title>
+  <style>
+    #videoContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  
+  <b> <h2 style="text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(67, 30, 116); font-size: 55px;">Your 3D Intern Experience</h2><b>
+  <div id="loadingMessage" style="font-weight: normal; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: gray; font-size: 35px">Your NeRF is loading...</div>
+  <div id="videoContainer"></div>
+<script>
+  const videoData = localStorage.getItem('uploadedVideo');
+  const loadingMessage = document.getElementById('loadingMessage');
+  const videoContainer = document.getElementById('videoContainer');
+
+  if (videoData) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'video-border';
+
+    const video = document.createElement('video');
+    video.src = videoData;
+    video.controls = true;
+    video.style.width = '1000px';
+
+    video.addEventListener('canplaythrough', function() {
+      loadingMessage.style.display = 'none';
+    });
+
+    wrapper.appendChild(video);
+    videoContainer.appendChild(wrapper);
+  } else {
+    loadingMessage.innerText = 'No video found. Please upload a video first.';
+  }
+</script>
+
+<div style="padding-bottom: 100px"></div>
+</body>
+</html>
