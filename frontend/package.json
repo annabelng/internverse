@@ -1,0 +1,21 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "NeRF Intern Memory Capsule is a web-based platform that transforms a single intern photo into a 3D memory using Nerfstudio. Interns upload a photo from a moment during their internship, from team lunches to intern socials, and our system reconstructs the scene into an immersive 3D experience. These “capsules” are displayed in a scrollable gallery, creating a shared, interactive memory wall of intern life at Microsoft.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "http-server .",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

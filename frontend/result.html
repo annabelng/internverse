@@ -10,7 +10,8 @@
       align-items: center;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
       font-size: 20px;
-      justify-content: space-evenly;
+      justify-content: center; /* Changed from space-evenly to center */
+      gap: 30px; /* Added gap to control spacing between items */
     }
 
     nav a {
@@ -41,6 +42,8 @@ nav .logo{
     </nav>
 
 <!-- End of nav-->
+
+
 <title>Your Intern Experience in 3D!</title>
   <style>
     #videoContainer {
@@ -55,29 +58,48 @@ nav .logo{
   <b> <h2 style="text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(67, 30, 116); font-size: 55px;">Your 3D Intern Experience</h2><b>
   <div id="loadingMessage" style="font-weight: normal; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: gray; font-size: 35px">Your NeRF is loading...</div>
   <div id="videoContainer"></div>
-<script>
-  const videoData = localStorage.getItem('uploadedVideo');
+
+  <script>
+  const mediaData = localStorage.getItem('uploadedMedia');
+  const mediaType = localStorage.getItem('uploadedMediaType');
   const loadingMessage = document.getElementById('loadingMessage');
   const videoContainer = document.getElementById('videoContainer');
 
-  if (videoData) {
-    const wrapper = document.createElement('div');
-    wrapper.className = 'video-border';
+  function showMedia() {
+    if (mediaData && mediaType) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'video-border';
 
-    const video = document.createElement('video');
-    video.src = videoData;
-    video.controls = true;
-    video.style.width = '1000px';
+      if (mediaType.startsWith('image/')) {
+        const img = document.createElement('img');
+        img.src = mediaData;
+        img.style.width = '1000px';
+        img.style.borderRadius = '18px';
+        img.style.background = '#f9f8ff';
+        img.onload = function() {
+          loadingMessage.style.display = 'none';
+        };
+        wrapper.appendChild(img);
+      } else if (mediaType.startsWith('video/')) {
+        const video = document.createElement('video');
+        video.src = mediaData;
+        video.controls = true;
+        video.style.width = '1000px';
+        video.oncanplaythrough = function() {
+          loadingMessage.style.display = 'none';
+        };
+        wrapper.appendChild(video);
+      }
 
-    video.addEventListener('canplaythrough', function() {
-      loadingMessage.style.display = 'none';
-    });
-
-    wrapper.appendChild(video);
-    videoContainer.appendChild(wrapper);
-  } else {
-    loadingMessage.innerText = 'No video found. Please upload a video first.';
+      videoContainer.appendChild(wrapper);
+    } else {
+      loadingMessage.innerText = 'No media found. Please upload and process a file first.';
+    }
   }
+
+  // Show loading message for 5 seconds, then show media
+  loadingMessage.style.display = 'block';
+  setTimeout(showMedia, 5000);
 </script>
 
 <div style="padding-bottom: 100px"></div>
