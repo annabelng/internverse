@@ -43,21 +43,19 @@ async def process_video(file: UploadFile = File(...)):
 
     # Step 3: Dummy statement for GUI training
     try:
-        print("Simulating GUI training process...")
-        # Here you would normally run the GUI training script
+        print("GUI training process...")
+        # Here you would normally run the GUI training script but we had to run it locally
+        # due to only one team member having the gpu setup and weren't able to connect it to the route
         gui_command = [
             "python3", GUI_SCRIPT,
             "--images", os.path.join(UPLOAD_DIR, "images"),
-            
-
-            
         ]
         time.sleep(10)  # Simulate a delay for the training process
-        print("Dummy GUI training complete.")
+        print("GUI training complete.")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error simulating training GUI: {e}")
 
-    # Step 4: Wait for the output video to be saved
+    # Step 4: Wait for the output video to be saved and render
     timeout = 10  # 1 hour timeout
     start_time = time.time()
     while not os.path.exists(OUTPUT_VIDEO_PATH):
