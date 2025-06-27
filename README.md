@@ -1,4 +1,4 @@
-# Internverse_NeRF_Capsule
+# InternVerse - a 3D Memory Capsule for Microsoft Interns
 
 Internverse is a web-based platform that transforms a single video or collection of photos into a dynamic 3D memory using the Instant-NGP NeRF library. Microsoft interns are able to upload a photo/video onto the platform from a moment during their internship (i.e. team lunches, intern socials, and project presentations), and our system reconstructs the scene into an immersive 3D experience. These “capsules” are then displayed in a scrollable community gallery, creating a shared, interactive memory collage of intern life at Microsoft.
 
